@@ -21,7 +21,7 @@ iPhone.addEventListener("click", function(event) {
 
     }
 
-    if (clickTarget.classList.contain("btn") && !clickTarget.classList.contains("active")) {
+    if (clickTarget.classList.contains("btn") && !clickTarget.classList.contains("active")) {
         clickTarget.classList.add("active");
         activeButton.classList.remove("active");
     }
@@ -45,40 +45,40 @@ iPhone.addEventListener("click", function(event) {
 });
 
 samsung.addEventListener("click", function(event) {
-    let clickTarget = event.target;
-    let activeButton = iPhone.querySelector(".active");
-    let priceItem = iPhone.querySelector(".price");
-    let currentPrice;
+    let clickTargetTarget = event.target;
+    let activeButton_2 = iPhone.querySelector(".active");
+    let priceItem_2 = iPhone.querySelector(".price");
+    let currentPrice_2;
 
-    let activeButtonColor = iPhone.querySelector(".active-border")
+    let activeButtonColor_2 = samsung.querySelector(".active-border")
 
-    if (clickTarget.classList.contains("color-btn") && 
-    !clickTarget.classList.contains("active-border")
+    if (clickTargetTarget.classList.contains("color-btn") && 
+    !clickTargetTarget.classList.contains("active-border")
     ) {
 
-            clickTarget.classList.add("active-border");
+            clickTargetTarget.classList.add("active-border");
 
-            activeButtonColor.classList.remove("active-border");
+            activeButtonColor_2.classList.remove("active-border");
 
     }
 
-    if (clickTarget.classList.contain("btn") && !clickTarget.classList.contains("active")) {
-        clickTarget.classList.add("active");
-        activeButton.classList.remove("active");
+    if (clickTargetTarget.classList.contains("btn") && !clickTargetTarget.classList.contains("active")) {
+        clickTargetTarget.classList.add("active");
+        activeButton_2.classList.remove("active");
     }
 
-    if (clickTarget.classList.contains("btn") && !clickTarget.classList.contains("active")) {
+    if (clickTargetTarget.classList.contains("btn") && !clickTargetTarget.classList.contains("active")) {
     clickTargetTarget.classList.add("active");
-    activeButton.classList.remove("active");
+    activeButton_2.classList.remove("active");
     }
 
-    currentPrice = clickTarget.getAttribute("data-size");
+    currentPrice_2 = clickTargetTarget.getAttribute("data-size");
 
-    if(currentPrice === "medium") {
-        priceItem.textContent = "Цена 80 000р."
+    if(currentPrice_2 === "medium") {
+        priceItem_2.textContent = "Цена 80 000р."
     }
 
-    if(currentPrice === "large") {
+    if(currentPrice_2 === "large") {
         priceItem.textContent = "Цена 100 000р."
     }
 });
